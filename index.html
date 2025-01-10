@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutricionista Deportivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS para un diseño moderno y visualmente impresionante */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to right, #f9f9f9, #e3f2fd);
+            padding-bottom: 50px;
+        }
+
+        header {
+            background: linear-gradient(to right, #1abc9c, #16a085);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #16a085;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f1c40f;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #1abc9c;
+            position: relative;
+        }
+
+        .container h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #1abc9c;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .service h3 {
+            color: #16a085;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .service p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .service i {
+            font-size: 2.5rem;
+            color: #1abc9c;
+            margin-bottom: 10px;
+        }
+
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background: linear-gradient(to right, #1abc9c, #16a085);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        form button:hover {
+            background: #159f80;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        footer a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .whatsapp-contact {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer .whatsapp-contact a {
+            background: #25D366;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        footer .whatsapp-contact a:hover {
+            background: #1ab154;
+        }
+
+        footer .whatsapp-contact a i {
+            margin-right: 10px;
+        }
+
+        /* Animación suave al desplazarse */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nutricionista Deportivo</h1>
+        <p>Optimiza tu rendimiento a través de la nutrición</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="container" id="inicio">
+        <h2>Bienvenido</h2>
+        <p>Con años de experiencia ayudando a atletas a alcanzar su máximo potencial, nuestro objetivo es diseñar planes de nutrición personalizados para mejorar tu desempeño deportivo.</p>
+    </div>
+
+    <div class="container" id="servicios">
+        <h2>Servicios</h2>
+        <div class="services">
+            <div class="service">
+                <i class="fas fa-apple-alt"></i>
+                <h3>Planificación Nutricional</h3>
+                <p>Planes personalizados para alcanzar tus metas deportivas.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Evaluación Corporal</h3>
+                <p>Análisis completo para optimizar tu rendimiento.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-comments"></i>
+                <h3>Asesoramiento</h3>
+                <p>Soporte continuo para mantenerte en el camino correcto.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contacto">
+        <h2>Contacto</h2>
+        <form id="contactForm" action="https://formspree.io/f/xdkkyark" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Nutricionista Deportivo. Todos los derechos reservados. Diseñado con <a href="#">amor</a>.</p>
+        <div class="whatsapp-contact">
+            <a href="https://wa.me/56961993606" target="_blank">
+                <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Gracias por contactarnos. Te responderemos pronto.');
+        });
+    </script>
+</body>
+</html>
